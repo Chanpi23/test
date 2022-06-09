@@ -3,7 +3,7 @@ const app = express()
 const cors = require ('cors')
 const PORT = 8000
 const MongoClient= require('mongodb').MongoClient
-const connectionString = ' mongodb+srv://Mark-down:<password>@cluster0.shxru6q.mongodb.net/?retryWrites=true&w=majority'
+const connectionString ='mongodb+srv://Mark-down:GCalzzjVDiwprRcr@cluster0.shxru6q.mongodb.net/?retryWrites=true&w=majority'
 
 app.use (cors())
 app.use (express.json())
@@ -72,8 +72,8 @@ app.use (express.json())
 MongoClient.connect(connectionString)
 .then(client=> {
     console.log('Connected to Database')
-const db = client.db('star-trek-api')
-const infoCollection = db.collection('alien-info')
+const db = client.db('Star-trek-api')
+const infoCollection = db.collection('alien-name')
 
 
 
